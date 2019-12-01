@@ -8,4 +8,4 @@ function Download () {
     );
 }
 
-export default Download;
+export default Download

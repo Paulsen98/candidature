@@ -1,5 +1,6 @@
 import React from "react";
 import InputText from "../components/InputText"
+import Dropdown from "../components/Dropdown"
 
 function Candidature() {
     return (
@@ -81,6 +82,13 @@ function Candidature() {
                         name="contactFirstName"
                         labelText="Vorname"
                     />
+                    <Dropdown
+                        options={{ val1: "männlich", val2: "weiblich" }}
+                        selected="männlich"
+                        labelText="Geschlecht"
+                        classes="col-md-2"
+                        name="gender"
+                    />
                     <div className="col-md-2">
                         <div className="form-group">
                             <label htmlFor="salutaion">Anrede</label>
@@ -104,12 +112,6 @@ function Candidature() {
                     />
                 </div>
                 <div className="row">
-                    <div className="col-md-10">
-                        <div className="form-group">
-                            <label htmlFor="contactStreet">Straße</label>
-                            <input type="text" name="contactStreet" id="contactStreet" className="form-control"/>
-                        </div>
-                    </div>
                     <InputText
                         classes="col-md-10"
                         name="contactStreet"
@@ -146,4 +148,4 @@ function Candidature() {
     );
 }
 
-export default Candidature;
+export default Candidature
